@@ -28,13 +28,15 @@ function setup() {
 	groundSprite=createSprite(width/2, height-35, width,10);
 	groundSprite.shapeColor=color(255)
 
-	box1= (650,760,10,10);
-	box1.shapeColor("red");
+	
+
 
 
 
 	engine = Engine.create();
 	world = engine.world;
+
+	box1= new Box(width/2,height-45,200,20);
 
 	packageBody = Bodies.circle(width/2 , 200 , 5 , {restitution:0.3, isStatic:true});
 	World.add(world, packageBody);
